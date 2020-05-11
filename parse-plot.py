@@ -24,7 +24,7 @@ vX = []
 vY = []
 vZ = []
 
-with open("../Left hand/Driving car/driving_2.csv") as file:
+with open("../Left hand/Static/no_movement2.csv") as file:
 	csvObj = csv.reader(file, delimiter=',')
 	cnt = 0
 	for row in csvObj:
@@ -90,34 +90,59 @@ for j in range(0, len(vX)):
 	avgsY.append(avgY + 7)
 	avgsZ.append(avgZ + 80.6)
 
-'''
-with open('output.csv', 'w') as csvfile:
-	cwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-	for row in obj1:
-		cwriter.writerow(row)
-'''
+
+# calculate velocity
+uX = 0
+uY = 0
+uZ = 0
+vX = []
+vY = []
+vZ = []
+velocity = []
+for i in range(0, len(dT)):
+	# print(aX[i])
+	# print(dT[i])
+	# print(f"{aX[i]}, {aY[i]}, {aZ[i]}")
+	print(f"{aX[i]+aY[i]+aZ[i]+0.980665}")
+	uX += aX[i]*(dT[i]/1000)
+	uY += aY[i]*(dT[i]/1000)
+	uZ += aZ[i]*(dT[i]/1000)
+	vX.append(uX)
+	vY.append(uY)
+	vZ.append(uZ)
+	velocity.append(uX+uY+uZ)
+	# print(f"{uX}, {uY}, {uZ}")
+	
+
+
 
 print("done")
 
 low = 1
-high = 2000
+high = 500
 
-plt.figure(0) 
-plt.plot(allTimes[low:high], avgsX[low:high], "r")
-plt.plot(allTimes[low:high], avgsY[low:high], "g")
-plt.plot(allTimes[low:high], avgsZ[low:high], "b")
-plt.ylabel('acceleration')
-plt.title("moving average")
+# plt.figure(0) 
+# plt.plot(allTimes[low:high], avgsX[low:high], "r")
+# plt.plot(allTimes[low:high], avgsY[low:high], "g")
+# plt.plot(allTimes[low:high], avgsZ[low:high], "b")
+# plt.ylabel('acceleration')
+# plt.title("accelerometer moving average")
 
 plt.figure(1) 
 plt.plot(timestamps[low:high], aX[low:high], "r")
 plt.plot(timestamps[low:high], aY[low:high], "g")
 plt.plot(timestamps[low:high], aZ[low:high], "b")
 plt.ylabel('acceleration')
-plt.title("raw data")
+plt.title("raw accelerometer")
 
-plt.figure(2) 
-plt.plot(timestamps[low:high], dT[low:high], "r")
+# plt.figure(2) 
+# plt.title("time since last sample")
+# plt.plot(timestamps[low:high], dT[low:high], "r")
 
+# velocity plot
+plt.figure(3) 
+plt.plot(timestamps[low:high], velocity[low:high], "r")
+plt.ylabel('velocity')
+plt.title("velocity")
 		
 plt.show()
