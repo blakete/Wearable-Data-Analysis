@@ -24,7 +24,7 @@ vX = []
 vY = []
 vZ = []
 
-with open("Left hand/Driving car/driving_2.csv") as file:
+with open("../Left hand/Driving car/driving_2.csv") as file:
 	csvObj = csv.reader(file, delimiter=',')
 	cnt = 0
 	for row in csvObj:
