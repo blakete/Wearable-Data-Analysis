@@ -8,4 +8,4 @@ Apple Watch data processing for activity recognition
 References
 
 
-[![An old rock in the desert]("Twomey, N.; Diethe, T.; Fafoutis, X.; Elsts, A.; McConville, R.; Flach, P.; Craddock, I. A Comprehensive    Study of Activity Recognition Using Accelerometers. Informatics 2018, 5, 27.")](https://www.mdpi.com/2227-9709/5/2/27)
+Twomey, N.; Diethe, T.; Fafoutis, X.; Elsts, A.; McConville, R.; Flach, P.; Craddock, I. A Comprehensive Study of Activity Recognition Using Accelerometers. Informatics 2018, 5, 27.(https://www.mdpi.com/2227-9709/5/2/27)
