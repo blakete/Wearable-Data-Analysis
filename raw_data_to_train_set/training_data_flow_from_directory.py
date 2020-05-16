@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 shift = 15
 window_size = 45
-mean_diff_threshold = 20
+mean_diff_threshold = 35
 training_samples = []
 training_targets = []
 
@@ -49,6 +49,8 @@ for i in range(0, len(classes)):
                 target = np.zeros(3)
                 target[classes.index(classes[i])] = 1
                 training_targets.append(target)
+            else:
+                print(f"Dropping sample with mean: {mean}")
 
 np.save("training_samples", np.asarray(training_samples))
 np.save("training_targets", np.asarray(training_targets))
