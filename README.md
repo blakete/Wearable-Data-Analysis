@@ -1,11 +1,13 @@
 # Wearable-Data-Analysis
-Apple Watch data processing for activity recognition
+Apple Watch data engine framework and algorithms for human activity recognition
 
 [Download Human Activity Recognition Dataset](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
+
 
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/raw_accelerometer.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/move_avg_accelerometer.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/time.png)
+
 
 
 References
