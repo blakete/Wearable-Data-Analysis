@@ -30,6 +30,8 @@ for i in range(0, len(classes)):
     curr_data_path = os.path.join(collected_data_path, classes[i])
     print(f"processing  class: {classes[i]}")
     csvs = glob(os.path.join(curr_data_path, "*.csv"))
+    processed = 0
+    failed = 0
     for k in range(0, len(csvs)):
         print(f"processing {csvs[k]}")
         raw_data = pd.read_csv(csvs[k])
@@ -47,24 +49,31 @@ for i in range(0, len(classes)):
             diff = abs((1000/15)-mean)
             if diff < mean_diff_threshold:
                 print(f"Processing sample with mean: {mean}")
+                processed = processed + 1
                 training_samples.append(sample)
                 target = np.zeros(3)
                 target[classes.index(classes[i])] = 1
                 training_targets.append(target)
             else:
                 print(f"Dropping sample with mean: {mean}")
+                failed = failed + 1
                 # print(sample_diffs)
-                plt.subplot(211)
-                plt.title("Milliseconds between samples")
-                plt.plot(np.arange(1, window_size), sample_diffs)
-                plt.ylim([min(sample_diffs)-5, max(sample_diffs)+5])
-                plt.subplot(212)
+                # plt.subplot(211)
+                # plt.title("Milliseconds between samples")
+                # plt.plot(np.arange(1, window_size), sample_diffs)
+                # plt.ylim([min(sample_diffs)-5, max(sample_diffs)+5])
+                # plt.subplot(212)
                 # plt.title("Accelerometer sample window")
-                plt.plot(np.arange(1, window_size+1), raw_data['accelerometerAccelerationX(G)'][j:j + window_size], 'r')
-                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationY(G)'][j:j + window_size], 'g')
-                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationZ(G)'][j:j + window_size], 'b')
-                plt.ylim([-3.5, 3.5])
-                plt.show()
+                # plt.plot(np.arange(1, window_size+1), raw_data['accelerometerAccelerationX(G)'][j:j + window_size], 'r')
+                # plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationY(G)'][j:j + window_size], 'g')
+                # plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationZ(G)'][j:j + window_size], 'b')
+                # plt.ylim([-3.5, 3.5])
+                # plt.show()
+print(f'\nSuccesfully processed {(processed)/float((failed+processed))*100}% of the dataset')
+print(f'Total samples: {failed+processed}')
+print(f'Failed samples: {failed}')
+print(f'Successful samples: {processed}')
+
 
 np.save("training_samples", np.asarray(training_samples))
 np.save("training_targets", np.asarray(training_targets))
