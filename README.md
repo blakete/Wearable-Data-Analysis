@@ -4,7 +4,7 @@ Apple Watch data engine framework and algorithms for human activity recognition
 
 [Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
 
-raw_data_to_train_set/training_data_flow_from_directory.py output:
+Output from /raw_data_to_train_set/training_data_flow_from_directory.py :
 ```
 ...
 processing /Wearable-Data-Analysis/debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 191022 19_43_36.csv
