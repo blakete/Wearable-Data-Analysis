@@ -33,11 +33,12 @@ for i in range(0, len(classes)):
     for k in range(0, len(csvs)):
         print(f"processing {csvs[k]}")
         raw_data = pd.read_csv(csvs[k])
-        raw_numpy = raw_data[["loggingTime(txt)", "accelerometerAccelerationX(G)", "accelerometerAccelerationY(G)",
+        raw_numpy = raw_data[["accelerometerTimestamp_sinceReboot(s)", "accelerometerAccelerationX(G)", "accelerometerAccelerationY(G)",
                               "accelerometerAccelerationZ(G)"]].to_numpy()
         # todo remove redundant loops
         for j in range(0, len(raw_numpy)):
-            raw_numpy[j][0] = parser.parse(raw_numpy[j][0]).timestamp() * 1000
+            raw_numpy[j][0] = raw_numpy[j][0]*1000
+        # print(raw_numpy)
         for j in range(0, len(raw_numpy) - window_size, 15):
             sample = raw_numpy[j:j + window_size]
             sample_diffs = np.diff(sample[:,0], n=1, axis=0)
@@ -45,12 +46,23 @@ for i in range(0, len(classes)):
             mean = np.mean(sample_diffs, axis=0)
             diff = abs((1000/15)-mean)
             if diff < mean_diff_threshold:
+                print(f"Processing sample with mean: {mean}")
                 training_samples.append(sample)
                 target = np.zeros(3)
                 target[classes.index(classes[i])] = 1
                 training_targets.append(target)
             else:
                 print(f"Dropping sample with mean: {mean}")
+                # print(sample_diffs)
+                plt.subplot(211)
+                plt.plot(np.arange(1, window_size), sample_diffs)
+                plt.ylim([min(sample_diffs)-5, max(sample_diffs)+5])
+                plt.subplot(212)
+                plt.plot(np.arange(1, window_size+1), raw_data['accelerometerAccelerationX(G)'][j:j + window_size], 'r')
+                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationY(G)'][j:j + window_size], 'g')
+                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationZ(G)'][j:j + window_size], 'b')
+                plt.ylim([-3.5, 3.5])
+                plt.show()
 
 np.save("training_samples", np.asarray(training_samples))
 np.save("training_targets", np.asarray(training_targets))
