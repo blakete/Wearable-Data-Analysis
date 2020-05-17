@@ -8,6 +8,7 @@ from glob import glob
 from dateutil import parser
 from datetime import datetime
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt; plt.rcdefaults()
 
 shift = 15
 window_size = 45
@@ -57,7 +58,6 @@ for i in range(0, len(classes)):
                 training_targets.append(target)
             else:
                 print(f"Dropping sample with mean: {mean}")
-                print(idx)
                 failed[idx] += 1
                 # print(sample_diffs)
                 # plt.subplot(211)
@@ -81,14 +81,24 @@ print(f'Total samples: {sum(failed)+sum(processed)}')
 print(f'Failed samples: {sum(failed)}')
 print(f'Successful samples: {sum(processed)}')
 
+# saving training data
 np.save("training_samples", np.asarray(training_samples))
 np.save("training_targets", np.asarray(training_targets))
 
+# plotting processing results
+y_pos = np.arange(len(classes))
 
+plt.bar(y_pos, processed, align='center', alpha=0.5, color="g")
+plt.xticks(y_pos, classes)
+plt.ylabel('Samples')
+plt.title('Class vs. Samples (processed)')
+# plt.show()
 
-
-
-
+plt.bar(y_pos, failed, align='center', alpha=0.5, color="r")
+# plt.xticks(y_pos, classes)
+# plt.ylabel('Samples')
+# plt.title('Class vs. Samples (failed)')
+plt.show()
 
 
 
