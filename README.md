@@ -1,7 +1,7 @@
 # Wearable-Data-Analysis
 Apple Watch data engine framework and algorithms for human activity recognition
-TODO: down sampling and processing of raw accelerometer data from activities
-TODO: conversion to training data windows
+<br/>TODO: down sampling and processing of raw accelerometer data from activities
+<br/>TODO: conversion to training data windows
 
 [Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
 
