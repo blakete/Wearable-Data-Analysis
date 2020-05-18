@@ -34,7 +34,7 @@ Failed samples have a sampling rate outside the acceptable range of 10 Hz - 25 H
 Results:
 ```
 Epoch 30/30
-5931/5931 [==============================] - 0s 67us/sample - loss: 0.2514 - accuracy: 0.9391 - val_loss: 0.2482 - val_accuracy: 0.9412
+5931/5931 [==============================] - 0s 67us/sample - accuracy: 0.9391 - val_accuracy: 0.9412
 Test loss: 0.2481557119758952
 Test accuracy: 0.9411566
 Confusion matrix:
