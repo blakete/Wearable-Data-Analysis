@@ -1,6 +1,5 @@
 # Wearable-Data-Analysis
 Apple Watch data engine framework and algorithms for human activity recognition
-<br/>TODO: down sampling and processing of raw accelerometer data from activities
 
 [Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
 
@@ -26,7 +25,8 @@ Successful samples: 5475
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/stair_16.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class_distribution.png)
-
+Failed samples have a sampling rate outside the acceptable range of 10 Hz - 25 Hz
+<br/>TODO: down sampling and processing of raw accelerometer data from activities
 
 References
 
