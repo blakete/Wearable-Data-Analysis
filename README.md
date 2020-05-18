@@ -25,6 +25,7 @@ Successful samples: 5475
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/stair_16.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class_distribution.png)
 
 
 References
