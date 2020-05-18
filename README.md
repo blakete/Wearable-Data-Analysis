@@ -1,7 +1,24 @@
 # Wearable-Data-Analysis
 Apple Watch data engine framework and algorithms for human activity recognition using an accelerometer data stream.
 
-##[Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
+### [Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
+
+## Human Activity Recognition Solutions
+
+### Convolutional Neural Network
+Results:
+```
+Epoch 30/30
+5931/5931 [==============================] - 0s 67us/sample - accuracy: 0.9391 - val_accuracy: 0.9412
+Test loss: 0.2481557119758952
+Test accuracy: 0.9411566
+Confusion matrix:
+['dustbin', 'run', 'stair', 'walk']
+[[ 497    0    0    7]
+ [   0  153    0  124]
+ [   0    0    0  160]
+ [  23   35    0 4932]]
+```
 
 Output from /raw_data_to_train_set/training_data_flow_from_directory.py :
 ```
@@ -28,22 +45,6 @@ Successful samples: 5475
 Failed samples have a sampling rate outside the acceptable range of 10 Hz - 25 Hz
 <br/>TODO: down sampling of raw accelerometer data from activities
 
-## Human Activity Recognition Solutions
-
-### Convolutional Neural Network
-Results:
-```
-Epoch 30/30
-5931/5931 [==============================] - 0s 67us/sample - accuracy: 0.9391 - val_accuracy: 0.9412
-Test loss: 0.2481557119758952
-Test accuracy: 0.9411566
-Confusion matrix:
-['dustbin', 'run', 'stair', 'walk']
-[[ 497    0    0    7]
- [   0  153    0  124]
- [   0    0    0  160]
- [  23   35    0 4932]]
-```
 
 ## References
 
