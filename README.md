@@ -22,10 +22,9 @@ Failed samples: 109
 Successful samples: 5475
 ```
 
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/raw_accelerometer.png)
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/move_avg_accelerometer.png)
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/time.png)
-
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/stair_16.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
 
 
 References
