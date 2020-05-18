@@ -1,7 +1,7 @@
 # Wearable-Data-Analysis
 Apple Watch data engine framework and algorithms for human activity recognition using an accelerometer data stream.
 
-[Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
+##[Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
 
 Output from /raw_data_to_train_set/training_data_flow_from_directory.py :
 ```
@@ -28,7 +28,24 @@ Successful samples: 5475
 Failed samples have a sampling rate outside the acceptable range of 10 Hz - 25 Hz
 <br/>TODO: down sampling of raw accelerometer data from activities
 
-References
+## Human Activity Recognition Solutions
+
+### Convolutional Neural Network
+Results:
+```
+Epoch 30/30
+5931/5931 [==============================] - 0s 67us/sample - loss: 0.2514 - accuracy: 0.9391 - val_loss: 0.2482 - val_accuracy: 0.9412
+Test loss: 0.2481557119758952
+Test accuracy: 0.9411566
+Confusion matrix:
+['dustbin', 'run', 'stair', 'walk']
+[[ 497    0    0    7]
+ [   0  153    0  124]
+ [   0    0    0  160]
+ [  23   35    0 4932]]
+```
+
+## References
 
 [Cole, C.A., Janos, B., Anshari, D., Thrasher, J.F., Strayer, S.M., & Valafar, H. (2020). Recognition of Smoking Gesture Using Smart Watch Technology. ArXiv, abs/2003.02735.](https://arxiv.org/pdf/2003.02735.pdf)
 
