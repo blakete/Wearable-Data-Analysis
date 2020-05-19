@@ -10,6 +10,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt; plt.rcdefaults()
 
+dustbin_label_loc = 0
 shift = 15
 window_size = 45
 mean_diff_threshold = 60000
@@ -28,7 +29,6 @@ for i in range(0, len(classes)):
 classes = sorted(classes, key=str.lower)
 
 processed = np.zeros(len(classes))
-processed[0] = 500  # todo: update automatically with dustbin class data generation
 failed = np.zeros(len(classes))
 for i in range(0, len(classes)):
     curr_data_path = os.path.join(collected_data_path, classes[i])
@@ -53,7 +53,7 @@ for i in range(0, len(classes)):
             if diff < mean_diff_threshold:
                 # print(f"Processing sample with mean: {mean}")
                 processed[idx] += 1
-                training_samples.append(sample)
+                training_samples.append(sample[:,1:])
                 target = np.zeros(len(classes))
                 target[classes.index(classes[i])] = 1
                 training_targets.append(target)
@@ -78,17 +78,17 @@ for i in range(0, len(classes)):
                 print(f"Dropping sample with mean: {mean}")
                 failed[idx] += 1
                 # print(sample_diffs)
-                plt.subplot(211)
-                plt.title(f'{classes[i]} | Milliseconds between samples')
-                plt.plot(np.arange(1, window_size), sample_diffs)
-                plt.ylim([min(sample_diffs)-100, max(sample_diffs)+100])
-                plt.subplot(212)
-                plt.title("Accelerometer sample window")
-                plt.plot(np.arange(1, window_size+1), raw_data['accelerometerAccelerationX(G)'][j:j + window_size], 'r')
-                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationY(G)'][j:j + window_size], 'g')
-                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationZ(G)'][j:j + window_size], 'b')
-                plt.ylim([-4.75, 4.75])
-                plt.show()
+                # plt.subplot(211)
+                # plt.title(f'{classes[i]} | Milliseconds between samples')
+                # plt.plot(np.arange(1, window_size), sample_diffs)
+                # plt.ylim([min(sample_diffs)-100, max(sample_diffs)+100])
+                # plt.subplot(212)
+                # plt.title("Accelerometer sample window")
+                # plt.plot(np.arange(1, window_size+1), raw_data['accelerometerAccelerationX(G)'][j:j + window_size], 'r')
+                # plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationY(G)'][j:j + window_size], 'g')
+                # plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationZ(G)'][j:j + window_size], 'b')
+                # plt.ylim([-4.75, 4.75])
+                # plt.show()
 
 print(f'\nClasses: {classes}')
 print(f'Successful: {processed}')
@@ -100,6 +100,20 @@ print(f'Failed samples: {sum(failed)}')
 print(f'Successful samples: {sum(processed)}')
 
 # saving training data
+training_samples = np.asarray(training_samples)
+training_targets = np.asarray(training_targets)
+
+# create set of dustbin samples
+num_dustbin_samples = 1000
+dustbin_samples = np.random.uniform(-3,3,size=(num_dustbin_samples,45,3))
+dustbin_labels = np.zeros((num_dustbin_samples, len(classes)))
+dustbin_labels[:, dustbin_label_loc] = 1
+
+# generate random noise for dust bin class
+train_x = np.concatenate((training_samples, dustbin_samples))
+train_y = np.concatenate((training_targets, dustbin_labels))
+processed[0] += num_dustbin_samples
+
 np.save("training_samples", np.asarray(training_samples))
 np.save("training_targets", np.asarray(training_targets))
 

@@ -20,7 +20,7 @@ img_rows, img_cols = 45, 3
 classes = ['dustbin', 'lay', 'run', 'sit', 'stair', 'walk']
 train_x = np.load("../raw_data_to_train_set/training_samples.npy")
 train_y = np.load("../raw_data_to_train_set/training_targets.npy")
-train_x = train_x[:,:,1:]
+# train_x = train_x[:,:,1:]
 print(train_x.shape)
 
 # create set of dustbin samples
