@@ -1,7 +1,7 @@
 # Wearable-Data-Analysis
 Apple Watch data engine framework and algorithms for human activity recognition using an accelerometer data stream.
 
-[Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
+[Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1sIqmj5eS39np8gXwqByge_Rd_xmH5Efr?usp=sharing)
 
 ## Human Activity Recognition
 
@@ -9,16 +9,17 @@ Apple Watch data engine framework and algorithms for human activity recognition 
 Results:
 ```
 Epoch 30/30
-5931/5931 [==============================] - 0s 67us/sample - accuracy: 0.9391 - val_accuracy: 0.9412
-Test loss: 0.2481557119758952
-Test accuracy: 0.9411566
-Confusion matrix:
+6050/6050 [==============================] - 0s 74us/sample - loss: 0.2519 - accuracy: 0.9235 - val_loss: 0.2491 - val_accuracy: 0.9245
+loss: 0.24911313154480674
+accuracy: 0.9244628
 ['dustbin', 'run', 'stair', 'walk']
-[[ 497    0    0    7]
- [   0  153    0  124]
- [   0    0    0  160]
- [  23   35    0 4932]]
+[[ 499    0    0    5]
+ [   1  333    0   62]
+ [   0    1    0  159]
+ [  55  174    0 4761]]
 ```
+![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/myplot.png)
+
 Architecture:
 ```_________________________________________________________________
 Layer (type)                 Output Shape              Param #   
