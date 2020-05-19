@@ -3,6 +3,33 @@ Apple Watch data engine framework and algorithms for human activity recognition 
 
 [Download Human Activity Recognition Datasets](https://drive.google.com/drive/folders/1sIqmj5eS39np8gXwqByge_Rd_xmH5Efr?usp=sharing)
 
+## Data Engine
+
+### $ python /raw_data_to_train_set/training_data_flow_from_directory.py :
+```
+...
+Processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 191022 19_43_36.csv
+Dropping sample with mean: 119.7367386364124
+Dropping sample with mean: 119.73890719698234
+Processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
+
+Classes: ['run', 'stairs', 'walk']
+Successful: [316, 35, 5124]
+Failed: [21, 0, 88]
+
+Successfully processed 98.04799426934098% of the dataset
+Total samples: 5584
+Failed samples: 109
+Successful samples: 5475
+```
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class-distribution.png)
+
+## Visualized Data Samples
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
+
+<br/>TODO: down sampling of raw accelerometer data from activities
+
 ## Human Activity Recognition
 
 ### Convolutional Neural Network
@@ -37,35 +64,6 @@ accuracy: 0.9244628
  [  55  174    0 4761]]
 ```
 ![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/confusion-matrix.png)
-
-
-## Data Engine
-
-### $ python /raw_data_to_train_set/training_data_flow_from_directory.py :
-```
-...
-Processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 191022 19_43_36.csv
-Dropping sample with mean: 119.7367386364124
-Dropping sample with mean: 119.73890719698234
-Processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
-
-Classes: ['run', 'stairs', 'walk']
-Successful: [316, 35, 5124]
-Failed: [21, 0, 88]
-
-Successfully processed 98.04799426934098% of the dataset
-Total samples: 5584
-Failed samples: 109
-Successful samples: 5475
-```
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class-distribution.png)
-
-## Visualized Data Samples
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
-
-<br/>TODO: down sampling of raw accelerometer data from activities
-
 
 ## References
 
