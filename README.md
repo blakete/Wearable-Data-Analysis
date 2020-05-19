@@ -32,7 +32,7 @@ Successful samples: 5475
 
 ## Human Activity Recognition
 
-### Convolutional Neural Network
+### Convolutional Neural Network (CNN)
 
 Architecture:
 ```_________________________________________________________________
@@ -51,7 +51,7 @@ Trainable params: 22,340
 Non-trainable params: 0
 ```
 
-Results:
+CNN Results:
 ```
 Epoch 30/30
 6050/6050 [==============================] - 0s 74us/sample - loss: 0.2519 - accuracy: 0.9235 - val_loss: 0.2491 - val_accuracy: 0.9245
