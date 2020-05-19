@@ -12,21 +12,22 @@ from tensorflow.keras.layers import Dense, Dropout, Flatten
 
 epochs = 50
 batch_size = 32
-num_classes = 4
+num_classes = 6
+dustbin_label_loc = 0
 img_rows, img_cols = 45, 3
 
 # load generated samples
 classes = ['dustbin', 'run', 'stair', 'walk']
-train_x = np.load("/raw_data_to_train_set/training_samples.npy")
-train_y = np.load("/raw_data_to_train_set/training_targets.npy")
+train_x = np.load("../raw_data_to_train_set/training_samples.npy")
+train_y = np.load("../raw_data_to_train_set/training_targets.npy")
 train_x = train_x[:,:,1:]
 print(train_x.shape)
 
 # create set of dustbin samples
 num_dustbin_samples = 500
 dustbin_samples = np.random.uniform(-3,3,size=(num_dustbin_samples,45,3))
-dustbin_labels = np.zeros((num_dustbin_samples, 4))
-dustbin_labels[:, 0] = 1
+dustbin_labels = np.zeros((num_dustbin_samples, num_classes))
+dustbin_labels[:, dustbin_label_loc] = 1
 
 # generate random noise for dust bin class
 train_x = np.concatenate((train_x, dustbin_samples))
