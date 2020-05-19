@@ -10,7 +10,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt; plt.rcdefaults()
 
-dustbin_label_loc = 0
+dustbin_label_loc = 1
 shift = 15
 window_size = 45
 mean_diff_threshold = 60000
