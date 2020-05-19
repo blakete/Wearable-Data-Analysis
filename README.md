@@ -18,7 +18,7 @@ accuracy: 0.9244628
  [   0    1    0  159]
  [  55  174    0 4761]]
 ```
-![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/myplot.png)
+![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/confusion-matrix.png)
 
 Architecture:
 ```_________________________________________________________________
