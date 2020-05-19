@@ -60,8 +60,8 @@ Successful samples: 5475
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/stair_16.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class_distribution.png)
-Failed samples have a sampling rate outside the acceptable range of 10 Hz - 25 Hz
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class-distribution.png)
+<br/>Failed samples have a sampling rate outside the acceptable range of 10 Hz - 25 Hz
 <br/>TODO: down sampling of raw accelerometer data from activities
 
 
