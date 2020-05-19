@@ -17,11 +17,7 @@ mean_diff_threshold = 60000
 training_samples = []
 training_targets = []
 
-
-labels = np.arange(5)
-
 collected_data_path = "/Users/blakeedwards/Desktop/Repos/research/Wearable-Data-Analysis/debug_raw_data/left-hand"
-
 
 classes = glob(os.path.join(collected_data_path, "*"))
 for i in range(0, len(classes)):
@@ -130,7 +126,11 @@ plt.bar(y_pos, failed, align='center', alpha=0.5, color="r")
 # plt.xticks(y_pos, classes)
 # plt.ylabel('Samples')
 # plt.title('Class vs. Samples (failed)')
-plt.show()
+# plt.show()
+
+plt.show(block=False)
+plt.pause(10)
+plt.close()
 
 
 
