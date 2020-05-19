@@ -19,6 +19,8 @@ Confusion matrix:
  [   0    0    0  160]
  [  23   35    0 4932]]
 ```
+![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/myplot.png)
+
 Architecture:
 ```_________________________________________________________________
 Layer (type)                 Output Shape              Param #   
