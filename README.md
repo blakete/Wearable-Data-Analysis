@@ -6,19 +6,6 @@ Apple Watch data engine framework and algorithms for human activity recognition 
 ## Human Activity Recognition
 
 ### Convolutional Neural Network
-Results:
-```
-Epoch 30/30
-6050/6050 [==============================] - 0s 74us/sample - loss: 0.2519 - accuracy: 0.9235 - val_loss: 0.2491 - val_accuracy: 0.9245
-loss: 0.24911313154480674
-accuracy: 0.9244628
-['dustbin', 'run', 'stair', 'walk']
-[[ 499    0    0    5]
- [   1  333    0   62]
- [   0    1    0  159]
- [  55  174    0 4761]]
-```
-![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/myplot.png)
 
 Architecture:
 ```_________________________________________________________________
@@ -36,6 +23,21 @@ Total params: 22,340
 Trainable params: 22,340
 Non-trainable params: 0
 ```
+
+Results:
+```
+Epoch 30/30
+6050/6050 [==============================] - 0s 74us/sample - loss: 0.2519 - accuracy: 0.9235 - val_loss: 0.2491 - val_accuracy: 0.9245
+loss: 0.24911313154480674
+accuracy: 0.9244628
+['dustbin', 'run', 'stair', 'walk']
+[[ 499    0    0    5]
+ [   1  333    0   62]
+ [   0    1    0  159]
+ [  55  174    0 4761]]
+```
+![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/confusion-matrix.png)
+
 
 ## Data Engine
 
@@ -56,11 +58,13 @@ Total samples: 5584
 Failed samples: 109
 Successful samples: 5475
 ```
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class-distribution.png)
 
+## Visualized Data Samples
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/stair_16.png)
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class-distribution.png)
+
 <br/>Failed samples have a sampling rate outside the acceptable range of 10 Hz - 25 Hz
 <br/>TODO: down sampling of raw accelerometer data from activities
 
