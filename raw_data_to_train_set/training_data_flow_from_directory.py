@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt; plt.rcdefaults()
 
 shift = 15
 window_size = 45
-mean_diff_threshold = 35
+mean_diff_threshold = 60000
 training_samples = []
 training_targets = []
 
@@ -27,8 +27,9 @@ for i in range(0, len(classes)):
     classes[i] = re.sub(str(collected_data_path)+str('/'), "", classes[i])
 classes = sorted(classes, key=str.lower)
 
-processed = [0,0,0,0]
-failed = [0,0,0,0]
+processed = np.zeros(len(classes))
+processed[0] = 500  # todo: update automatically with dustbin class data generation
+failed = np.zeros(len(classes))
 for i in range(0, len(classes)):
     curr_data_path = os.path.join(collected_data_path, classes[i])
     print(f"processing  class: {classes[i]}")
@@ -77,17 +78,17 @@ for i in range(0, len(classes)):
                 print(f"Dropping sample with mean: {mean}")
                 failed[idx] += 1
                 # print(sample_diffs)
-                # plt.subplot(211)
-                # plt.title("Milliseconds between samples")
-                # plt.plot(np.arange(1, window_size), sample_diffs)
-                # plt.ylim([min(sample_diffs)-5, max(sample_diffs)+5])
-                # plt.subplot(212)
-                # plt.title("Accelerometer sample window")
-                # plt.plot(np.arange(1, window_size+1), raw_data['accelerometerAccelerationX(G)'][j:j + window_size], 'r')
-                # plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationY(G)'][j:j + window_size], 'g')
-                # plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationZ(G)'][j:j + window_size], 'b')
-                # plt.ylim([-3.5, 3.5])
-                # plt.show()
+                plt.subplot(211)
+                plt.title(f'{classes[i]} | Milliseconds between samples')
+                plt.plot(np.arange(1, window_size), sample_diffs)
+                plt.ylim([min(sample_diffs)-100, max(sample_diffs)+100])
+                plt.subplot(212)
+                plt.title("Accelerometer sample window")
+                plt.plot(np.arange(1, window_size+1), raw_data['accelerometerAccelerationX(G)'][j:j + window_size], 'r')
+                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationY(G)'][j:j + window_size], 'g')
+                plt.plot(np.arange(1, window_size + 1), raw_data['accelerometerAccelerationZ(G)'][j:j + window_size], 'b')
+                plt.ylim([-4.75, 4.75])
+                plt.show()
 
 print(f'\nClasses: {classes}')
 print(f'Successful: {processed}')
