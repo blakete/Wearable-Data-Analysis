@@ -26,13 +26,13 @@ Successful samples: 12797.0
 
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/lay_sample.png)
 
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_sample.png)
 
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/sit_sample.png)
 
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/stair_sample.png)
 
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_1668.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_sample.png)
 
 <br/>TODO: down sampling of raw accelerometer data from activities
 
