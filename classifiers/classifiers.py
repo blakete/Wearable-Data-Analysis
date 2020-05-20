@@ -65,6 +65,7 @@ score = model.evaluate(x_test, y_test, verbose=0)
 print('loss:', score[0])
 print('accuracy:', score[1])
 
+np.set_printoptions(suppress=True)
 y_pred = model.predict(x_test)
 y_pred = [np.argmax(y) for y in y_pred]
 y_test_max = [np.argmax(y) for y in y_test]
