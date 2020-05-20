@@ -8,19 +8,16 @@ Apple Watch data engine framework and algorithms for human activity recognition 
 ### $ python /raw_data_to_train_set/training_data_flow_from_directory.py :
 ```
 ...
-Processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 191022 19_43_36.csv
-Dropping sample with mean: 119.7367386364124
-Dropping sample with mean: 119.73890719698234
-Processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
+processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
 
-Classes: ['run', 'stairs', 'walk']
-Successful: [316, 35, 5124]
-Failed: [21, 0, 88]
+Classes: ['drive', 'dustbin', 'lay', 'run', 'sit', 'stair', 'walk']
+Successful: [1.465e+03 4.000e+00 1.180e+03 4.790e+02 4.227e+03 1.600e+02 5.282e+03]
+Failed: [0. 0. 0. 0. 0. 0. 0.]
 
-Successfully processed 98.04799426934098% of the dataset
-Total samples: 5584
-Failed samples: 109
-Successful samples: 5475
+Succesfully processed 100.0% of the dataset
+Total samples: 12797.0
+Failed samples: 0.0
+Successful samples: 12797.0
 ```
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/classes.png)
 
