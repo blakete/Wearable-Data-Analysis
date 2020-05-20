@@ -108,29 +108,29 @@ dustbin_labels[:, dustbin_label_loc] = 1
 # generate random noise for dust bin class
 train_x = np.concatenate((training_samples, dustbin_samples))
 train_y = np.concatenate((training_targets, dustbin_labels))
-processed[0] += num_dustbin_samples
 
-np.save("training_samples", np.asarray(training_samples))
-np.save("training_targets", np.asarray(training_targets))
+np.save("training_samples", np.asarray(train_x))
+np.save("training_targets", np.asarray(train_y))
 
 # plotting processing results
 y_pos = np.arange(len(classes))
 
-plt.bar(y_pos, processed, align='center', alpha=0.5, color="g")
+
 plt.xticks(y_pos, classes)
 plt.ylabel('Samples')
 plt.title('Class vs. Samples (processed & failed)')
 # plt.show()
-
+processed = np.sum(train_y, axis=0)
+plt.bar(y_pos, processed, align='center', alpha=0.5, color="g")
 plt.bar(y_pos, failed, align='center', alpha=0.5, color="r")
 # plt.xticks(y_pos, classes)
 # plt.ylabel('Samples')
 # plt.title('Class vs. Samples (failed)')
-# plt.show()
+plt.show()
 
-plt.show(block=False)
-plt.pause(10)
-plt.close()
+# plt.show(block=False)
+# plt.pause(10)
+# plt.close()
 
 
 
