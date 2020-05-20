@@ -22,7 +22,7 @@ Total samples: 5584
 Failed samples: 109
 Successful samples: 5475
 ```
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/class-distribution.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/classes.png)
 
 ## Visualized Data Samples
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_34.png)
