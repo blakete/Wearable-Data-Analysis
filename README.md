@@ -1,7 +1,7 @@
 # Wearable Data Analysis
 Apple Watch data engine framework and algorithms for human activity recognition using an accelerometer data stream.
 
-[Download Human Activity Recognition Dataset](https://drive.google.com/drive/folders/1DHQ8qPfv5xpGWKWLE99JIlssQM9yqHzg?usp=sharing)
+[Download Human Activity Recognition Dataset](https://bit.ly/3g4Ize1)
 
 ## Data Engine
 
