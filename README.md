@@ -34,8 +34,6 @@ Successful samples: 12797.0
 
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_sample.png)
 
-<br/>TODO: down sampling of raw accelerometer data from activities
-
 ## Human Activity Recognition
 
 ### Convolutional Neural Network (CNN)
