@@ -17,8 +17,11 @@ img_rows, img_cols = 45, 3
 
 # load generated samples
 classes = ['drive', 'dustbin', 'lay', 'run', 'sit', 'stair', 'walk']
-train_x = np.load("../raw_data_to_train_set/training_samples.npy")
-train_y = np.load("../raw_data_to_train_set/training_targets.npy")
+# train_x = np.load("../raw_data_to_train_set/training_samples.npy")
+# train_y = np.load("../raw_data_to_train_set/training_targets.npy")
+train_x = np.load("/Users/blakeedwards/Downloads/drive-download-20200521T003324Z-001/training_samples.npy")
+train_y = np.load("/Users/blakeedwards/Downloads/drive-download-20200521T003324Z-001/training_targets.npy")
+
 
 # todo: split off test set when we have larger dataset
 (x_train, y_train), (x_test, y_test) = (train_x, train_y), (train_x, train_y)
