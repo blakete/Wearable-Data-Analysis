@@ -72,7 +72,6 @@ Non-trainable params: 320
 ```
 
 CNN Results:
-Updated 05/20/2020
 ```
 Epoch 50/50
 13797/13797 [==============================] - 2s 164us/sample - loss: 0.2066 - accuracy: 0.9305 - val_loss: 0.2226 - val_accuracy: 0.9218
