@@ -17,7 +17,6 @@ Successful samples: 27578.0
 Classes: ['drive', 'dustbin', 'lay', 'run', 'sit', 'stair', 'stand', 'walk'] 
 [6076. 1004. 3572. 2315. 8374.  456.  344. 6437.]
 ```
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/classes.png)
 
 ## Visualized Data Samples
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/drive_sample.png)
