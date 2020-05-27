@@ -89,7 +89,7 @@ Confusion matrix:
  [0.01344188 0.         0.00359712 0.00018932 0.00037864 0.00056797 0.98182507]]
 ```
 Confusion matrix:<br/>
-![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/confusion-matrix.png)
+![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/confusion-matrix2.png)
 
 ## References
 
