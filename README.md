@@ -7,10 +7,9 @@ Apple Watch data engine framework and algorithms for human activity recognition 
 
 ### $ python /raw_data_to_train_set/training_data_flow_from_directory.py :
 ```
-...
 processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
-
-Succesfully processed 99.97824825986079% of the dataset
+...
+Successfully processed 99.97824825986079% of the dataset
 Total samples: 27584.0
 Failed samples: 6.0
 Successful samples: 27578.0
