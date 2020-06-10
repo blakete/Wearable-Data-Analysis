@@ -37,9 +37,12 @@ for i in range(0, len(classes)):
     for k in range(0, len(csvs)):
         print(f"processing {csvs[k]}")
         raw_data = pd.read_csv(csvs[k])
-        raw_numpy = raw_data[
-            ["accelerometerTimestamp_sinceReboot(s)", "accelerometerAccelerationX(G)", "accelerometerAccelerationY(G)",
-             "accelerometerAccelerationZ(G)"]].to_numpy()
+        try:
+            raw_numpy = raw_data[["accelerometerTimestamp_sinceReboot(s)", "accelerometerAccelerationX(G)", "accelerometerAccelerationY(G)",
+                "accelerometerAccelerationZ(G)"]].to_numpy()
+        except:
+            print("[ERROR] Loaded data contains incorrect columnn names")
+            continue
         # todo remove redundant loops
         for j in range(0, len(raw_numpy)):
             raw_numpy[j][0] = raw_numpy[j][0] * 1000
@@ -98,7 +101,9 @@ training_targets = np.asarray(training_targets)
 # create set of dustbin samples
 num_dustbin_samples = 1000
 dustbin_samples = np.random.uniform(-3, 3, size=(num_dustbin_samples, 45, 3))
-dustbin_labels = np.zeros((num_dustbin_samples, len(classes)))
+# dustbin_samples = np.concatenate((dustbin_samples,  np.random.uniform(-2, 2, size=(num_dustbin_samples, 45, 3))))
+# dustbin_samples = np.concatenate((dustbin_samples,  np.random.uniform(-1, 1, size=(num_dustbin_samples, 45, 3))))
+dustbin_labels = np.zeros((len(dustbin_samples), len(classes)))
 dustbin_labels[:, dustbin_label_loc] = 1
 # print(dustbin_labels)
 
