@@ -15,11 +15,11 @@ plt.rcdefaults()
 
 shift = 15
 window_size = 45
-mean_diff_threshold = 60000
+mean_diff_threshold = 20000
 training_samples = []
 training_targets = []
 
-collected_data_path = "/Users/blakeedwards/Documents/Google-Drive/data-engine/left-hand"
+collected_data_path = "/home/pi/Desktop/drive/left-hand"
 
 classes = glob(os.path.join(collected_data_path, "*"))
 for i in range(0, len(classes)):
@@ -111,8 +111,8 @@ dustbin_labels[:, dustbin_label_loc] = 1
 train_x = np.concatenate((training_samples, dustbin_samples))
 train_y = np.concatenate((training_targets, dustbin_labels))
 
-np.save("../train_set/training_samples", np.asarray(train_x))
-np.save("../train_set/training_targets", np.asarray(train_y))
+np.save("/home/pi/Desktop/Wearable-Data-Analysis-master/train_set/training_samples", np.asarray(train_x))
+np.save("/home/pi/Desktop/Wearable-Data-Analysis-master/train_set/training_targets", np.asarray(train_y))
 
 print(f'\nClasses: {classes}')
 print(f'Successful: {processed}')
