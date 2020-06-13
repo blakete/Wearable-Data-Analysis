@@ -45,7 +45,7 @@ Classes: ['drive', 'dustbin', 'lay', 'run', 'sit', 'stair', 'stand', 'walk']
 ## Human Activity Recognition
 
 ### Convolutional Neural Network (CNN)
-#### Achieved 98.3% top-1 and 100% top-3 accuracy on test set
+#### Achieved 98.3% top-1 and 100% top-3 accuracy on test dataset
 
 
 #### Architecture:
