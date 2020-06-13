@@ -6,6 +6,7 @@ Apple Watch data engine framework and algorithms for human activity recognition 
 - [Visualized Data Samples](#visualized-data-samples)
 - [Human Activity Recognition with Convolutional Neural Network](#human-activity-recognition)
 - [Human Activity Recognition Dataset](https://bit.ly/3g4Ize1)
+- [References](#references)
 
 ## Data Engine
 
