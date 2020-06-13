@@ -1,18 +1,24 @@
 # Wearable Data Analysis
 Apple Watch data engine framework and algorithms for human activity recognition using an accelerometer data stream.
 
-[click on this link](#my-multi-word-header)
-
-### My Multi Word Header
-
-[Download Human Activity Recognition Dataset](https://bit.ly/3g4Ize1)
+## Table of Contents
+[Start Data Engine](#data-engine)
+[Visualized Data Samples](#visualized-data-samples)
+[Human Activity Recognition with Convolutional Neural Network](#human-activity-recognition)
+[Human Activity Recognition Dataset](https://bit.ly/3g4Ize1)
 
 ## Data Engine
 
-### $ python /raw_data_to_train_set/training_data_flow_from_directory.py :
+### 
+```console
+$ python /raw_data_to_train_set/training_data_flow_from_directory.py
+```
+Sample output:
 ```
 processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
-...
+.
+. (processes all CSVs in target directories' sub-directories)
+.
 Successfully processed 99.97824825986079% of the dataset
 Total samples: 27584.0
 Failed samples: 6.0
@@ -35,11 +41,12 @@ Classes: ['drive', 'dustbin', 'lay', 'run', 'sit', 'stair', 'stand', 'walk']
 
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_sample.png)
 
+
 ## Human Activity Recognition
 
 ### Convolutional Neural Network (CNN)
 
-Architecture:
+#### Architecture:
 ```_________________________________________________________________
 Model: "sequential"
 _________________________________________________________________
@@ -72,7 +79,7 @@ Trainable params: 179,207
 Non-trainable params: 320
 ```
 
-CNN Results:
+#### CNN Results:
 ```
 Epoch 100/100
 28578/28578 [==============================] - 5s 165us/sample - loss: 0.1019 - accuracy: 0.9627 - val_loss: 0.0806 - val_accuracy: 0.9698
