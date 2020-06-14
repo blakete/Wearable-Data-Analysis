@@ -16,7 +16,7 @@ $ git clone git@github.com:blakete/Wearable-Data-Analysis.git
 
 ## Run Data Engine
 ```console
-$ python3 raw_data_to_train_set/training_data_flow_from_directory.py
+$ python3 training_data_flow_from_directory.py [/path/to/dataset](https://bit.ly/3g4Ize1)
 processing raw dataset
 .
 . (processes all CSVs in target directories' sub-directories)
