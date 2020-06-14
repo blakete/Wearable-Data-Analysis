@@ -21,13 +21,13 @@ processing raw dataset
 .
 . (processes all CSVs in target directories' sub-directories)
 .
-Successfully processed 99.97824825986079% of the dataset
-Total samples: 27584.0
-Failed samples: 6.0
-Successful samples: 27578.0
+Successfully processed 100.0% of the dataset
+Total samples: 61990.0
+Failed samples: 0.0
+Successful samples: 61990.0
 
-Classes: ['drive', 'dustbin', 'lay', 'run', 'sit', 'stair', 'stand', 'walk'] 
-[6076. 1004. 3572. 2315. 8374.  456.  344. 6437.]
+Classes: ['drive', 'dustbin', 'lay', 'run', 'sit', 'skate', 'stair', 'stand', 'walk'] 
+Samples: [15141.  1004. 15477.  8261. 11659.   185.   532.  3877.  6854.]
 ```
 
 ## Visualized Data Samples
