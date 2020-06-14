@@ -45,10 +45,8 @@ Samples: [15141.  1004. 15477.  8261. 11659.   185.   532.  3877.  6854.]
 
 
 ## Human Activity Recognition
-#### Achieved 98.3% top-1 and 100% top-3 accuracy on test dataset
-### Convolutional Neural Network (CNN)
-
-#### Architecture:
+### Achieved 98.3% top-1 and 100% top-3 accuracy on test dataset
+### Convolutional Neural Network (CNN) Architecture:
 ```_________________________________________________________________
 Model: "sequential"
 _________________________________________________________________
