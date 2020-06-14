@@ -8,14 +8,14 @@ Apple Watch data engine framework and algorithms for human activity recognition 
 - [Human Activity Recognition Dataset](https://bit.ly/3g4Ize1)
 - [References](#references)
 
-## Data Engine
-
-### 
+## Get Started
 ```console
-$ python /raw_data_to_train_set/training_data_flow_from_directory.py
+$ git clone git@github.com:blakete/Wearable-Data-Analysis.git
 ```
-Sample output:
-```
+
+## Run Data Engine
+```console
+$ python3 raw_data_to_train_set/training_data_flow_from_directory.py
 processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
 .
 . (processes all CSVs in target directories' sub-directories)
