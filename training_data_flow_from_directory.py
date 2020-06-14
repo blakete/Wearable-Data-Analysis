@@ -1,12 +1,20 @@
 # Author: Blake Edwards
 import os
 import re
+import sys
+
 import math
 import numpy as np
 import pandas as pd
+from sys import exit
 from glob import glob
 from dateutil import parser
 from datetime import datetime
+
+if len(sys.argv) != 2:
+    print("[INCORRECT USAGE] try $ python3 /path/to/downloaded/dataset>")
+    exit()
+collected_data_path = sys.argv[1]
 
 np.set_printoptions(suppress=True)
 import matplotlib.pyplot as plt;
@@ -18,8 +26,6 @@ window_size = 45
 mean_diff_threshold = 20000
 training_samples = []
 training_targets = []
-
-collected_data_path = "/home/pi/Desktop/drive/left-hand"
 
 classes = glob(os.path.join(collected_data_path, "*"))
 for i in range(0, len(classes)):
@@ -111,8 +117,8 @@ dustbin_labels[:, dustbin_label_loc] = 1
 train_x = np.concatenate((training_samples, dustbin_samples))
 train_y = np.concatenate((training_targets, dustbin_labels))
 
-np.save("/home/pi/Desktop/Wearable-Data-Analysis-master/train_set/training_samples", np.asarray(train_x))
-np.save("/home/pi/Desktop/Wearable-Data-Analysis-master/train_set/training_targets", np.asarray(train_y))
+np.save("training_samples", np.asarray(train_x))
+np.save("training_targets", np.asarray(train_y))
 
 print(f'\nClasses: {classes}')
 print(f'Successful: {processed}')
@@ -123,4 +129,4 @@ print(f'Total samples: {sum(failed) + sum(processed)}')
 print(f'Failed samples: {sum(failed)}')
 print(f'Successful samples: {sum(processed)}')
 
-print(f'\nClasses: {classes} \n{np.sum(train_y, axis=0)}')
+print(f'\nClasses: {classes} \nSamples: {np.sum(train_y, axis=0)}')
