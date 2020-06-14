@@ -17,7 +17,7 @@ $ git clone git@github.com:blakete/Wearable-Data-Analysis.git
 ## Run Data Engine
 ```console
 $ python3 raw_data_to_train_set/training_data_flow_from_directory.py
-processing /debug_raw_data/left-hand/walk/stream Blake’s Apple Watch 200516 12_10_43.csv
+processing raw dataset
 .
 . (processes all CSVs in target directories' sub-directories)
 .
