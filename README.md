@@ -85,6 +85,11 @@ accuracy: 0.95932424
 Confusion matrix:<br/>
 ![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/confusion-matrix2.png)
 
+## Requirements
+* \>= Apple A12 or \>= iPhone XR 
+* \>= Apple Watch Series 3
+* [Wearable CoPilot App (coming soon!)](https://bit.ly/3g9T9Ak)
+
 ## References
 
 [Cole, C.A., Janos, B., Anshari, D., Thrasher, J.F., Strayer, S.M., & Valafar, H. (2020). Recognition of Smoking Gesture Using Smart Watch Technology. ArXiv, abs/2003.02735.](https://arxiv.org/pdf/2003.02735.pdf)
