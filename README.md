@@ -34,15 +34,11 @@ Samples: [15141.  1004. 15477.  8261. 11659.   185.   532.  3877.  6854.]
 ## Visualized Data Samples
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/drive_sample.png)
 
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/lay_sample.png)
-
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/run_sample.png)
 
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/sit_sample.png)
+![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_sample.png)
 
 ![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/stair_sample.png)
-
-![sample figure](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/walk_sample.png)
 
 
 ## Human Activity Recognition
