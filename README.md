@@ -88,7 +88,7 @@ Confusion matrix:<br/>
 ## Requirements
 * \>= Apple A12 or \>= iPhone XR 
 * \>= Apple Watch Series 3
-* [Wearable CoPilot App (coming soon!)](https://bit.ly/3g9T9Ak)
+* Wearable CoPilot App (coming soon!)
 
 ## References
 
