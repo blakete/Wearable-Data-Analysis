@@ -81,7 +81,7 @@ Non-trainable params: 320
 #### Example CNN Results:
 ```
 Epoch 150/150
-62273/62273 [==============================] - 12s 196us/sample - loss: 0.1251 - accuracy: 0.9542 - val_loss: 0.1124 - val_accuracy: 0.9593
+62273/62273 [==============================] - 12s 196us/sample - val_loss: 0.1124 - val_accuracy: 0.9593
 loss: 0.11244082237378554
 accuracy: 0.95932424
 ```
