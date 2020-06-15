@@ -45,7 +45,7 @@ Samples: [15141.  1004. 15477.  8261. 11659.   185.   532.  3877.  6854.]
 
 
 ## Human Activity Recognition
-### Achieved 98.3% top-1 and 100% top-3 accuracy on test dataset
+### Achieved 95.9% top-1 and 100% top-3 accuracy on test dataset
 ### Convolutional Neural Network (CNN) Architecture:
 ```_________________________________________________________________
 Model: "sequential"
@@ -78,22 +78,12 @@ Total params: 179,527
 Trainable params: 179,207
 Non-trainable params: 320
 ```
-
-#### CNN Results:
+#### Example CNN Results:
 ```
-Epoch 100/100
-28578/28578 [==============================] - 5s 165us/sample - loss: 0.1019 - accuracy: 0.9627 - val_loss: 0.0806 - val_accuracy: 0.9698
-loss: 0.08055452822212895
-accuracy: 0.969767
-['drive', 'dustbin', 'lay', 'run', 'sit', 'stair', 'stand', 'walk']
-[[0.95424621 0.         0.00740619 0.00049375 0.03752469 0. 0.00016458 0.00016458]
- [0.         0.99601594 0.00099602 0.         0.00298805 0. 0.         0.        ]
- [0.01427772 0.         0.89277716 0.         0.09294513 0. 0.         0.        ]
- [0.         0.         0.         1.         0.         0. 0.         0.        ]
- [0.00680678 0.         0.01146406 0.         0.98172916 0. 0.         0.        ]
- [0.         0.         0.         0.         0.         1. 0.         0.        ]
- [0.00290698 0.         0.         0.         0.         0. 0.95930233 0.0377907 ]
- [0.00357309 0.         0.00015535 0.         0.00046606 0. 0.00077676 0.99502874]]
+Epoch 150/150
+62273/62273 [==============================] - 12s 196us/sample - loss: 0.1251 - accuracy: 0.9542 - val_loss: 0.1124 - val_accuracy: 0.9593
+loss: 0.11244082237378554
+accuracy: 0.95932424
 ```
 Confusion matrix:<br/>
 ![Confusion Matrix](https://github.com/blakete/Wearable-Data-Analysis/blob/master/figures/confusion-matrix2.png)
