@@ -1,6 +1,6 @@
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 # Wearable Data Analysis
-Apple Watch data engine framework, dataset, and algorithms for human activity recognition.
+Apple Watch ML training data engine framework, dataset, and ML algorithms for human activity recognition.
 
 ## Table of Contents
 - [Get Started](#get-started)
